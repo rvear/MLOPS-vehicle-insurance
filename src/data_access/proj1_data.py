@@ -42,7 +42,7 @@ class Proj1Data:
             if database_name is None:
                 collection = self.mongo_client.database[collection_name]
             else:
-                collection = self.mongo_client[database_name][collection_name]
+                collection = self.mongo_client.client[database_name][collection_name]
 
             # Convert collection data to DataFrame and preprocess
             print("Fetching data from mongoDB")
